@@ -3,16 +3,17 @@ import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
 
-// get unique valuse of categories and add to array with 'all'
+// map - get all categories
+// get Set object of unique values
+// turn it back to array using spread
 const allCategories = ['all', ...new Set(items.map(item => item.category))]
-
-console.log(allCategories);
-
 
 function App() {
   const [menuItems, setMenuItems] = useState(items);
+  // set categories = array of all unique categories names from source data
   const [categories, setCategories] = useState(allCategories);
 
+  // filter items in data array of objects using category name
   const filterItems = category => {
 
     if (category === "all"){

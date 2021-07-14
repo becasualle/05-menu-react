@@ -4,8 +4,10 @@ const Menu = ({items}) => {
   return (
     <div className="section-center">
       {items.map(menuItem => {
+        // get all properties using destructuring
         const {id, title, category, price, img, desc} = menuItem;
         return (
+          // fore each item render article using id's
           <article key={id} className="menu-item">
             <img src={img} alt={title} className="photo"/>
             <div className="item-info">

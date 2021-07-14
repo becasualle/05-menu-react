@@ -3,6 +3,7 @@ import React from 'react';
 const Categories = ({ categories, filterItems}) => {
   return (
     <div className="btn-container">
+      {/* create button for each category in data and when click on button filter by category and update state */}
       {categories.map((category, index) => <button type="button" key={index} className="filter-btn" onClick={()=>filterItems(category)}>{category}</button>
       )}
     </div>
